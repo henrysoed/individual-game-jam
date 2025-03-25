@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://207bxflcdw0w"
-path="res://.godot/imported/roguelikeSheet_magenta.png-8b5a1bd2402a686e84ee58ef217ef439.ctex"
+uid="uid://bfpmbjymb487w"
+path="res://.godot/imported/RPGpack_sheet_2X.png-87f67f3c1f24f88f572f38c338c07ea8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/roguelikeSheet_magenta.png"
-dest_files=["res://.godot/imported/roguelikeSheet_magenta.png-8b5a1bd2402a686e84ee58ef217ef439.ctex"]
+source_file="res://Assets/Spritesheet-old/RPGpack_sheet_2X.png"
+dest_files=["res://.godot/imported/RPGpack_sheet_2X.png-87f67f3c1f24f88f572f38c338c07ea8.ctex"]
 
 [params]
 

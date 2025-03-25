@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-@export var speed: float = 85
+@export var speed: int = 85
 @onready var animations = $AnimationPlayer
 
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection*speed
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(delta):
 	handleInput()
 	move_and_slide()
 	updateAnimation()
@@ -24,3 +24,7 @@ func updateAnimation():
 		elif velocity.y < 0:
 			direction = "Up"
 		animations.play("walk"+direction)
+
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
