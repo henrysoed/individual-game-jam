@@ -232,6 +232,7 @@ radius = 8.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmuxe"]
 radius = 13.0
+height = 34.0
 
 [node name="slime" type="CharacterBody2D"]
 z_index = 1
