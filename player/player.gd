@@ -34,3 +34,5 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.name == "hitBox":
 		currentHealth -= 1
 		print_debug(currentHealth)
+	elif area.has_method("collect"):
+		area.collect(inventory)
