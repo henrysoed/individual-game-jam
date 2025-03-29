@@ -20,19 +20,3 @@ custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
-
-[node name="Panel" type="Panel" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
-
-[node name="Label" type="Label" parent="CenterContainer/Panel"]
-custom_minimum_size = Vector2(11, 14)
-layout_mode = 0
-offset_left = -1.0
-offset_right = 18.0
-offset_bottom = 23.0
-scale = Vector2(0.468733, 0.433743)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "99"
-horizontal_alignment = 2

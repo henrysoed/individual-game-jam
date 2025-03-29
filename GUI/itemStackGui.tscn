@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://be738tyck0sxh"]
+
+[ext_resource type="Script" path="res://GUI/item_stack_gui.gd" id="1_h3ty5"]
+
+[node name="Panel" type="Panel"]
+script = ExtResource("1_h3ty5")
+
+[node name="item" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(11, 14)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 18.0
+offset_bottom = 23.0
+scale = Vector2(0.468733, 0.433743)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "99"
+horizontal_alignment = 2
