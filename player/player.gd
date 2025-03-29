@@ -10,6 +10,12 @@ var currentHealth: int = 3
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection*speed
+
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		print_debug(collider.name)
 	
 func _physics_process(delta):
 	handleInput()
