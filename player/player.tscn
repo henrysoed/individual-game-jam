@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bd68ghnnadt56"]
+[gd_scene load_steps=15 format=3 uid="uid://bd68ghnnadt56"]
 
 [ext_resource type="Texture2D" uid="uid://dx5t2231y3ioj" path="res://Assets/Character/characters/player.png" id="1_1m70a"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_nj0gn"]
+[ext_resource type="Resource" uid="uid://c6yl2mniunorj" path="res://inventory/playerInventory.tres" id="2_rdpju"]
 
 [sub_resource type="Animation" id="Animation_8rg0c"]
 length = 0.001
@@ -195,6 +196,7 @@ z_index = 1
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_nj0gn")
+inventory = ExtResource("2_rdpju")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(31, 38.75)

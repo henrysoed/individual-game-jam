@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed: int = 85
 @onready var animations = $AnimationPlayer
 
+@export var inventory: Inventory
+
 var currentHealth: int = 3
 
 func handleInput():
