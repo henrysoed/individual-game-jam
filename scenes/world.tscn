@@ -3405,19 +3405,27 @@ position = Vector2(-344, -125)
 process_mode = 3
 script = ExtResource("4_4u8f7")
 
-[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("4_7sog5")]
-layout_direction = 1
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(20, 20)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -67.0
-offset_top = -42.0
-offset_right = 67.0
-offset_bottom = 42.0
+offset_left = -60.0
+offset_top = -40.0
+offset_right = 60.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(4.03165, 4.03165)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+use_top_left = true
 
-[connection signal="closed" from="CanvasLayer/InventoryGUI" to="." method="_on_inventory_gui_closed"]
-[connection signal="opened" from="CanvasLayer/InventoryGUI" to="." method="_on_inventory_gui_opened"]
+[node name="InventoryGUI" parent="CanvasLayer/CenterContainer" instance=ExtResource("4_7sog5")]
+layout_direction = 1
+layout_mode = 2
+
+[connection signal="closed" from="CanvasLayer/CenterContainer/InventoryGUI" to="." method="_on_inventory_gui_closed"]
+[connection signal="opened" from="CanvasLayer/CenterContainer/InventoryGUI" to="." method="_on_inventory_gui_opened"]

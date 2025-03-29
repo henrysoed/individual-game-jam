@@ -29,7 +29,6 @@ func updateAnimation():
 			direction = "Up"
 		animations.play("walk"+direction)
 
-
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.name == "hitBox":
 		currentHealth -= 1
