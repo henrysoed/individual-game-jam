@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
+class_name Player
+
+signal healthChanged
+
 @export var speed: int = 85
 @onready var animations = $AnimationPlayer
 
 @export var inventory: Inventory
 
-var currentHealth: int = 3
+@export var maxHealth = 3
+var currentHealth: int = maxHealth
 
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -38,6 +43,8 @@ func updateAnimation():
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.name == "hitBox":
 		currentHealth -= 1
-		print_debug(currentHealth)
+		if currentHealth < 0:
+			currentHealth = maxHealth
+		healthChanged.emit(currentHealth)
 	elif area.has_method("collect"):
 		area.collect(inventory)
