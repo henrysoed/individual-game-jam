@@ -14,32 +14,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l0o5d")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0.501961)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h7ahg")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
-self_modulate = Color(1, 1, 1, 0.501961)
-layout_mode = 2
-texture = ExtResource("2_h7ahg")
-
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_hh4ko")
 theme_override_font_sizes/font_size = 48
 text = "Let's Play Godot Adventure"
 
-[node name="start" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start" type="Button" parent="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
@@ -47,12 +55,12 @@ theme_override_fonts/font = ExtResource("4_8gfoi")
 theme_override_font_sizes/font_size = 45
 text = "Start Game"
 
-[node name="quit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="quit" type="Button" parent="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_8gfoi")
 theme_override_font_sizes/font_size = 38
 text = "Quit"
 
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/start" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]

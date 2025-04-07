@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass	
+	pass
 
 func _on_inventory_gui_closed() -> void:
 	get_tree().paused = false

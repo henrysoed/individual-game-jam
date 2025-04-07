@@ -4,23 +4,31 @@
 [ext_resource type="FontFile" uid="uid://1mvhs04wwxse" path="res://Assets/Fonts/Kenney Blocks.ttf" id="2_71xtv"]
 [ext_resource type="Script" path="res://scenes/link_button.gd" id="3_vvf6k"]
 
-[node name="CenterContainer" type="CenterContainer"]
-offset_right = 660.0
-offset_bottom = 371.0
-scale = Vector2(1.74168, 1.74168)
+[node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_p6bj0")
 
 [node name="LinkButton" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 249.0
-offset_top = 315.0
-offset_right = 418.0
-offset_bottom = 355.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -98.0
+offset_right = 152.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_71xtv")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 45
 text = "Main Menu"
 script = ExtResource("3_vvf6k")
 
