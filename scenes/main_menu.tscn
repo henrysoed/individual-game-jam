@@ -61,6 +61,6 @@ theme_override_fonts/font = ExtResource("4_8gfoi")
 theme_override_font_sizes/font_size = 38
 text = "Quit"
 
-[connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/MarginContainer/VBoxContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]

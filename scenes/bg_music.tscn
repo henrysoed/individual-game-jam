@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfvb345rju6n0"]
+
+[ext_resource type="AudioStream" uid="uid://bf5gmn78do7kj" path="res://Assets/music/Crayon Shinchan - Dōbutsuen wa Taihen da_動物園は大変だ (Chiptune Cover).mp3" id="1_ds2ya"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ds2ya")
+volume_db = 24.0
+autoplay = true
